@@ -1,0 +1,23 @@
+# Clone Repository
+git clone https://github.com/<username>/<repository>
+
+# Add Files/Changes to git
+git add <filename/path>
+
+# Commit Changes
+git commit -m "Message goes here"
+
+# Push Changes
+git push
+
+# Add a Remote
+git remote add upstream https://github.com/<username>/<repository>
+
+# Push to different remote
+git push upstream master
+
+# Tag a version
+git tag v1.0.7
+
+# Add a submodule
+git submodule add https://github.com/<username>/<repository>

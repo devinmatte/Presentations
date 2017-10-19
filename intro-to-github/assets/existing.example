@@ -1,0 +1,5 @@
+# Add a Remote
+git remote add origin https://github.com/<username>/<repository>
+
+# Push to remote and set upstream
+git push -u origin master
