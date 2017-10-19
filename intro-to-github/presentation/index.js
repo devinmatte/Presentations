@@ -27,6 +27,7 @@ const images = {
     newrepo: require("../assets/newrepo.png"),
     help: require("../assets/help.png"),
     issues: require("../assets/issues.png"),
+    projects: require("../assets/projects.png"),
 };
 
 preloader(images);
@@ -46,7 +47,7 @@ export default class Presentation extends React.Component {
     render() {
         return (
             <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-                <Slide transition={["zoom"]} bgColor="secondary">
+                <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit caps lineHeight={1} textColor="primary">
                         Intro to GitHub
                     </Heading>
@@ -54,15 +55,11 @@ export default class Presentation extends React.Component {
                         Get your terrible code online!
                     </Text>
                 </Slide>
-                <Slide transition={["slide"]} bgColor="primary">
-                    <Heading size={1} textColor="secondary" fit>Table of Contents</Heading>
-                    <Heading size={4} textColor="tertiary">Signing Up</Heading>
-                    <Heading size={5} textColor="tertiary">Your Profile</Heading>
-                    <Heading size={4} textColor="tertiary">Adding Projects</Heading>
-                    <Heading size={6} textColor="tertiary">Issues</Heading>
-                    <Heading size={6} textColor="tertiary">Forks</Heading>
-                    <Heading size={6} textColor="tertiary">Pull Requests</Heading>
-                    <Heading size={6} textColor="tertiary">Projects</Heading>
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary" fit>Follow Along</Heading>
+                    <Text textSize="1.0em" textColor="primary">
+                        There's a post on <Link textColor="tertiary" href="http://devinmatte.me">devinmatte.me</Link> going over in greater detail, everything gone over in this presentation.
+                    </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
@@ -168,10 +165,18 @@ export default class Presentation extends React.Component {
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
-                    <Heading size={1} fit textColor="primary">
-                        Issues and Projects
+                    <Heading size={1} textColor="primary">
+                        Issues
                     </Heading>
                     <Image src={images.issues.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+
+
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
+                        Projects
+                    </Heading>
+                    <Image src={images.projects.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
 
 
