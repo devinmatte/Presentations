@@ -28,6 +28,9 @@ const images = {
     help: require("../assets/help.png"),
     issues: require("../assets/issues.png"),
     projects: require("../assets/projects.png"),
+    studentpack: "https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png",
+    digitalocean: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-digitalocean-3d328c1d6619d314d47aab1259c1235b1339c343e12df62a688076bf6ceac866.jpg",
+    github: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg",
 };
 
 preloader(images);
@@ -74,6 +77,25 @@ export default class Presentation extends React.Component {
                     <BlockQuote textColor="secondary">
                         <Quote textColor="secondary">I don't care if you've used <i>wgahnagl</i> as your username on every account for 15 years. Stop.</Quote>
                     </BlockQuote>
+                </Slide>
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} fit textColor="primary">
+                        GitHub Student
+                    </Heading>
+                    <Image src={images.studentpack.replace('/', '')} margin="20px auto 20px" />
+                    <Text textSize="0.8em" textColor="primary">
+                        Get a bunch of free stuff!
+                    </Text>
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        <Link textColor="tertiary" href="https://education.github.com/pack">education.github.com</Link>
+                    </Heading>
+                    <Image src={images.digitalocean.replace('/', '')} margin="15px auto 15px" />
+                    <Image src={images.github.replace('/', '')} margin="15px auto 15px" />
+                    <Text textSize="0.8em">
+                        The pack gives you everything from Unlimited private repos on GitHub to $50 of DigitalOcean Credit!
+                    </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
