@@ -35,9 +35,9 @@ const images = {
     exampleFork: require("../assets/exampleFork.png"),
     exampleProject: require("../assets/exampleProject.png"),
     exampleDiff: require("../assets/exampleDiff.png"),
-    studentpack: "https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png",
-    digitalocean: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-digitalocean-3d328c1d6619d314d47aab1259c1235b1339c343e12df62a688076bf6ceac866.jpg",
-    github: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg",
+    studentpack: require("../assets/pack.png"),
+    digitalocean: require("../assets/digitalocean.jpg"),
+    github: require("../assets/github.jpg"),
 };
 
 preloader(images);
