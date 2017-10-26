@@ -38,6 +38,8 @@ const images = {
     studentpack: require("../assets/pack.png"),
     digitalocean: require("../assets/digitalocean.jpg"),
     github: require("../assets/github.jpg"),
+    releases: require("../assets/release.png"),
+    tags: require("../assets/tags.png"),
 };
 
 preloader(images);
@@ -235,6 +237,22 @@ export default class Presentation extends React.Component {
                         Projects is GitHub's solution to <Link textColor="tertiary" href="https://www.atlassian.com/software/jira">Jira</Link> and <Link textColor="tertiary" href="https://trello.com/">Trello</Link> in the marketplace. Agile boards aren't that complex, so they simply made one in GitHub, that uses issues and pull requests as the cards
                     </Text>
                     <Image src={images.exampleProject.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
+                        Releases
+                    </Heading>
+                    <Image src={images.releases.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Releases and Versions
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Releases are basically, version. Tagging a version at a point in time, and providing notes and maybe event install files to attach to it. Tags can also be checked out and pulled, so you can pull from a specific version without knowing the git hash
+                    </Text>
+                    <Image src={images.tags.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
