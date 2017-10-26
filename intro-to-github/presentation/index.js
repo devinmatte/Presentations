@@ -28,6 +28,11 @@ const images = {
     help: require("../assets/help.png"),
     issues: require("../assets/issues.png"),
     projects: require("../assets/projects.png"),
+    prs: require("../assets/prs.png"),
+    approved: require("../assets/approved.png"),
+    graph: require("../assets/graph.png"),
+    examplePR1: require("../assets/examplePR1.png"),
+    exampleDiff: require("../assets/exampleDiff.png"),
     studentpack: "https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png",
     digitalocean: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-digitalocean-3d328c1d6619d314d47aab1259c1235b1339c343e12df62a688076bf6ceac866.jpg",
     github: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg",
@@ -192,7 +197,68 @@ export default class Presentation extends React.Component {
                     </Heading>
                     <Image src={images.issues.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        What's an Issue?
+                    </Heading>
+                    <Text textSize="0.8em">
+                        An Issue is a post/report that contains a series of information. An issue could be a bug, missing feature, feature request, or a question even
+                    </Text>
+                    <Text textSize="0.8em">
+                        An Issue consists of:
+                    </Text>
+                    <List>
+                        <ListItem>Number Reference</ListItem>
+                        <ListItem>Title</ListItem>
+                        <ListItem>Markdown rich description</ListItem>
+                        <ListItem>Labels</ListItem>
+                        <ListItem>Assigned Users</ListItem>
+                        <ListItem>Milestones</ListItem>
+                        <ListItem>Projects</ListItem>
+                        <ListItem>Comments</ListItem>
+                    </List>
+                </Slide>
 
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
+                        Forks
+                    </Heading>
+                    <Image src={images.graph.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
+                        Pull Requests
+                    </Heading>
+                    <Image src={images.prs.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Example Pull Request
+                    </Heading>
+                    <Text textSize="0.8em">
+                        A pull request contains everything an issue does, plus attached commits
+                    </Text>
+                    <Image src={images.examplePR1.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Example Pull Request
+                    </Heading>
+                    <Text textSize="0.8em">
+                        A pull request shows all the changes from the current branch, compared to all commits in the Pull Request
+                    </Text>
+                    <Image src={images.exampleDiff.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Restrictions on PRs
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Sometimes repositories require reviews or checks to pass before allowing a Pull Request to be merged
+                    </Text>
+                    <Image src={images.approved.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
@@ -218,22 +284,13 @@ export default class Presentation extends React.Component {
                     />
                 </Slide>
 
-
-
-                <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-                    <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-                    <List>
-                        <ListItem>Item 1</ListItem>
-                        <ListItem>Item 2</ListItem>
-                        <ListItem>Item 3</ListItem>
-                        <ListItem>Item 4</ListItem>
-                    </List>
-                </Slide>
-                <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-                    <BlockQuote>
-                        <Quote>Example Quote</Quote>
-                        <Cite>Author</Cite>
-                    </BlockQuote>
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
+                        Questions/Demo
+                    </Heading>
+                    <Text textSize="1.0em" textColor="primary">
+                        There's a post on <Link textColor="tertiary" href="http://devinmatte.me">devinmatte.me</Link> going over in greater detail, everything gone over in this presentation.
+                    </Text>
                 </Slide>
             </Deck>
         );
