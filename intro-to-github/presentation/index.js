@@ -32,6 +32,8 @@ const images = {
     approved: require("../assets/approved.png"),
     graph: require("../assets/graph.png"),
     examplePR1: require("../assets/examplePR1.png"),
+    exampleFork: require("../assets/exampleFork.png"),
+    exampleProject: require("../assets/exampleProject.png"),
     exampleDiff: require("../assets/exampleDiff.png"),
     studentpack: "https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png",
     digitalocean: "https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-digitalocean-3d328c1d6619d314d47aab1259c1235b1339c343e12df62a688076bf6ceac866.jpg",
@@ -221,9 +223,34 @@ export default class Presentation extends React.Component {
 
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
+                        Projects
+                    </Heading>
+                    <Image src={images.projects.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Agile, In GitHub
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Projects is GitHub's solution to <Link textColor="tertiary" href="https://www.atlassian.com/software/jira">Jira</Link> and <Link textColor="tertiary" href="https://trello.com/">Trello</Link> in the marketplace. Agile boards aren't that complex, so they simply made one in GitHub, that uses issues and pull requests as the cards
+                    </Text>
+                    <Image src={images.exampleProject.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary">
                         Forks
                     </Heading>
                     <Image src={images.graph.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        What's a Fork?
+                    </Heading>
+                    <Text textSize="0.8em">
+                        A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+                    </Text>
+                    <Image src={images.exampleFork.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
@@ -259,14 +286,6 @@ export default class Presentation extends React.Component {
                     </Text>
                     <Image src={images.approved.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
-
-                <Slide transition={["slide"]} bgColor="secondary">
-                    <Heading size={1} textColor="primary">
-                        Projects
-                    </Heading>
-                    <Image src={images.projects.replace('/', '')} margin="20px auto 20px" />
-                </Slide>
-
 
                 <Slide transition={['slide']} bgColor="primary">
                     <Heading size={3} textColor="black">
