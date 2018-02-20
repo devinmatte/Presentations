@@ -40,6 +40,7 @@ const images = {
     github: require("../assets/github.jpg"),
     releases: require("../assets/release.png"),
     tags: require("../assets/tags.png"),
+    automation : require("../assets/automation.png"),
 };
 
 preloader(images);
@@ -237,6 +238,15 @@ export default class Presentation extends React.Component {
                         Projects is GitHub's solution to <Link textColor="tertiary" href="https://www.atlassian.com/software/jira">Jira</Link> and <Link textColor="tertiary" href="https://trello.com/">Trello</Link> in the marketplace. Agile boards aren't that complex, so they simply made one in GitHub, that uses issues and pull requests as the cards
                     </Text>
                     <Image src={images.exampleProject.replace('/', '')} margin="20px auto 20px" />
+                </Slide>
+                <Slide transition={["slide"]} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Automation
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Recently GitHub added automation to GitHub projects. This allows for agile board to automatically be updated based on actions on given Pull Requests or Issues. This makes them significantly more useful. There are actions for To do, In progress, and Done.
+                    </Text>
+                    <Image src={images.automation.replace('/', '')} margin="20px auto 20px" />
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
