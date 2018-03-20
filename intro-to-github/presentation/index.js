@@ -1,16 +1,22 @@
 // Import React
 import React from "react";
-
 // Import Spectacle Core tags
 import {
-    Appear, BlockQuote, Cite, CodePane, ComponentPlayground, Deck, Fill,
-    Heading, Image, Layout, Link, ListItem, List, Markdown, MarkdownSlides, Quote, Slide, SlideSet,
-    TableBody, TableHeader, TableHeaderItem, TableItem, TableRow, Table, Text
+    BlockQuote,
+    CodePane,
+    Deck,
+    Heading,
+    Image,
+    Link,
+    List,
+    ListItem,
+    Quote,
+    Slide,
+    SlideSet,
+    Text,
 } from "spectacle";
-
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
-
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
@@ -40,7 +46,7 @@ const images = {
     github: require("../assets/github.jpg"),
     releases: require("../assets/release.png"),
     tags: require("../assets/tags.png"),
-    automation : require("../assets/automation.png"),
+    automation: require("../assets/automation.png"),
 };
 
 preloader(images);
@@ -50,10 +56,10 @@ const theme = createTheme({
     secondary: "#1F2022",
     tertiary: "#03A9FC",
     tertiary2: "#0380cd",
-    quartenary: "#CECECE"
+    quartenary: "#CECECE",
 }, {
     primary: "Montserrat",
-    secondary: "Helvetica"
+    secondary: "Helvetica",
 });
 
 export default class Presentation extends React.Component {
@@ -71,28 +77,31 @@ export default class Presentation extends React.Component {
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary" fit>Follow Along</Heading>
                     <Text textSize="1.0em" textColor="primary">
-                        There's a post on <Link textColor="tertiary" href="http://devinmatte.me">devinmatte.me</Link> going over in greater detail, everything gone over in this presentation.
+                        There's a post on <Link textColor="tertiary"
+                                                href="http://devinmatte.me">devinmatte.me</Link> going over in greater
+                        detail, everything gone over in this presentation.
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
                         Signing Up
                     </Heading>
-                    <Image src={images.signup.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.signup.replace('/', '')} margin="20px auto 20px"/>
                     <Text textSize="0.8em" textColor="primary">
                         Pick a username that is easy to remember, and easy to match to you.
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary" textColor="secondary">
                     <BlockQuote textColor="secondary">
-                        <Quote textColor="secondary">I don't care if you've used <i>wgahnagl</i> as your username on every account for 15 years. Stop.</Quote>
+                        <Quote textColor="secondary">I don't care if you've used <i>wgahnagl</i> as your username on
+                            every account for 15 years. Stop.</Quote>
                     </BlockQuote>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
                         GitHub Student
                     </Heading>
-                    <Image src={images.studentpack.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.studentpack.replace('/', '')} margin="20px auto 20px"/>
                     <Text textSize="0.8em" textColor="primary">
                         Get a bunch of free stuff!
                     </Text>
@@ -101,33 +110,35 @@ export default class Presentation extends React.Component {
                     <Heading size={3} textColor="black">
                         <Link textColor="tertiary" href="https://education.github.com/pack">education.github.com</Link>
                     </Heading>
-                    <Image src={images.digitalocean.replace('/', '')} margin="15px auto 15px" />
-                    <Image src={images.github.replace('/', '')} margin="15px auto 15px" />
+                    <Image src={images.digitalocean.replace('/', '')} margin="15px auto 15px"/>
+                    <Image src={images.github.replace('/', '')} margin="15px auto 15px"/>
                     <Text textSize="0.8em">
-                        The pack gives you everything from Unlimited private repos on GitHub to $50 of DigitalOcean Credit!
+                        The pack gives you everything from Unlimited private repos on GitHub to $50 of DigitalOcean
+                        Credit!
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
                         Your Profile
                     </Heading>
-                    <Image src={images.profile.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.profile.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Pinned Repositories
                     </Heading>
-                    <Image src={images.pinned.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.pinned.replace('/', '')} margin="20px auto 20px"/>
                     <Text textSize="0.8em">
-                        GitHub allows for you to pin 6 repositories to the top of your Profile. Use This! Show off your best stuff first.
+                        GitHub allows for you to pin 6 repositories to the top of your Profile. Use This! Show off your
+                        best stuff first.
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Pinned Repositories
                     </Heading>
-                    <Image src={images.pinned2.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.pinned2.replace('/', '')} margin="20px auto 20px"/>
                     <Text textSize="0.8em">
                         You can select from any repository you own, or from any that you contribute to!
                     </Text>
@@ -136,7 +147,7 @@ export default class Presentation extends React.Component {
                     <Heading size={1} fit textColor="primary">
                         Adding Projects
                     </Heading>
-                    <Image src={images.newrepo.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.newrepo.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
@@ -171,7 +182,7 @@ export default class Presentation extends React.Component {
                     <Text textSize="0.8em">
                         GitHub will help you out if you forget how to initialize a new project
                     </Text>
-                    <Image src={images.help.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.help.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
@@ -190,24 +201,27 @@ export default class Presentation extends React.Component {
                     <Quote textColor="secondary">"My Code isn't good enough"</Quote>
 
                     <Text textSize="0.8em">
-                        What better way to show how you've improved than by being able to look back at where you came from?
+                        What better way to show how you've improved than by being able to look back at where you came
+                        from?
                     </Text>
                     <Text textSize="0.8em">
-                        Don't be discouraged by bad code! You're likely just starting out, no one expects anything incredible
+                        Don't be discouraged by bad code! You're likely just starting out, no one expects anything
+                        incredible
                     </Text>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
                         Issues
                     </Heading>
-                    <Image src={images.issues.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.issues.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         What's an Issue?
                     </Heading>
                     <Text textSize="0.8em">
-                        An Issue is a post/report that contains a series of information. An issue could be a bug, missing feature, feature request, or a question even
+                        An Issue is a post/report that contains a series of information. An issue could be a bug,
+                        missing feature, feature request, or a question even
                     </Text>
                     <Text textSize="0.8em">
                         An Issue consists of:
@@ -228,64 +242,73 @@ export default class Presentation extends React.Component {
                     <Heading size={1} textColor="primary">
                         Projects
                     </Heading>
-                    <Image src={images.projects.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.projects.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Agile, In GitHub
                     </Heading>
                     <Text textSize="0.8em">
-                        Projects is GitHub's solution to <Link textColor="tertiary" href="https://www.atlassian.com/software/jira">Jira</Link> and <Link textColor="tertiary" href="https://trello.com/">Trello</Link> in the marketplace. Agile boards aren't that complex, so they simply made one in GitHub, that uses issues and pull requests as the cards
+                        Projects is GitHub's solution to <Link textColor="tertiary"
+                                                               href="https://www.atlassian.com/software/jira">Jira</Link> and <Link
+                        textColor="tertiary" href="https://trello.com/">Trello</Link> in the marketplace. Agile boards
+                        aren't that complex, so they simply made one in GitHub, that uses issues and pull requests as
+                        the cards
                     </Text>
-                    <Image src={images.exampleProject.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.exampleProject.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Automation
                     </Heading>
                     <Text textSize="0.8em">
-                        Recently GitHub added automation to GitHub projects. This allows for agile board to automatically be updated based on actions on given Pull Requests or Issues. This makes them significantly more useful. There are actions for To do, In progress, and Done.
+                        Recently GitHub added automation to GitHub projects. This allows for agile board to
+                        automatically be updated based on actions on given Pull Requests or Issues. This makes them
+                        significantly more useful. There are actions for To do, In progress, and Done.
                     </Text>
-                    <Image src={images.automation.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.automation.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
                         Releases
                     </Heading>
-                    <Image src={images.releases.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.releases.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Releases and Versions
                     </Heading>
                     <Text textSize="0.8em">
-                        Releases are basically, version. Tagging a version at a point in time, and providing notes and maybe event install files to attach to it. Tags can also be checked out and pulled, so you can pull from a specific version without knowing the git hash
+                        Releases are basically, version. Tagging a version at a point in time, and providing notes and
+                        maybe event install files to attach to it. Tags can also be checked out and pulled, so you can
+                        pull from a specific version without knowing the git hash
                     </Text>
-                    <Image src={images.tags.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.tags.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
                         Forks
                     </Heading>
-                    <Image src={images.graph.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.graph.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         What's a Fork?
                     </Heading>
                     <Text textSize="0.8em">
-                        A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+                        A fork is a copy of a repository. Forking a repository allows you to freely experiment with
+                        changes without affecting the original project.
                     </Text>
-                    <Image src={images.exampleFork.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.exampleFork.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
 
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} textColor="primary">
                         Pull Requests
                     </Heading>
-                    <Image src={images.prs.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.prs.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
@@ -294,25 +317,27 @@ export default class Presentation extends React.Component {
                     <Text textSize="0.8em">
                         A pull request contains everything an issue does, plus attached commits
                     </Text>
-                    <Image src={images.examplePR1.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.examplePR1.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Example Pull Request
                     </Heading>
                     <Text textSize="0.8em">
-                        A pull request shows all the changes from the current branch, compared to all commits in the Pull Request
+                        A pull request shows all the changes from the current branch, compared to all commits in the
+                        Pull Request
                     </Text>
-                    <Image src={images.exampleDiff.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.exampleDiff.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
                 <Slide transition={["slide"]} bgColor="primary">
                     <Heading size={3} textColor="black">
                         Restrictions on PRs
                     </Heading>
                     <Text textSize="0.8em">
-                        Sometimes repositories require reviews or checks to pass before allowing a Pull Request to be merged
+                        Sometimes repositories require reviews or checks to pass before allowing a Pull Request to be
+                        merged
                     </Text>
-                    <Image src={images.approved.replace('/', '')} margin="20px auto 20px" />
+                    <Image src={images.approved.replace('/', '')} margin="20px auto 20px"/>
                 </Slide>
 
                 <Slide transition={['slide']} bgColor="primary">
@@ -336,7 +361,9 @@ export default class Presentation extends React.Component {
                         Questions/Demo
                     </Heading>
                     <Text textSize="1.0em" textColor="primary">
-                        There's a post on <Link textColor="tertiary" href="http://devinmatte.me">devinmatte.me</Link> going over in greater detail, everything gone over in this presentation.
+                        There's a post on <Link textColor="tertiary"
+                                                href="http://devinmatte.me">devinmatte.me</Link> going over in greater
+                        detail, everything gone over in this presentation.
                     </Text>
                 </Slide>
             </Deck>
