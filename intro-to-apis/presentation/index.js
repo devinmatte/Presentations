@@ -129,6 +129,46 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
 
+                <Slide transition={['slide']} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Status Codes
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Status codes in HTTP tell the client with a with a quick code, how the request responded.
+                        Allowing the user to handle types of requests depending on the code.
+                    </Text>
+                    <Text textSize="0.8em">
+                        There are 5 normal ranges
+                    </Text>
+                    <List>
+                        <ListItem>1xx: Informational responses.</ListItem>
+                        <ListItem>2xx: Success.</ListItem>
+                        <ListItem>3xx: Redirection.</ListItem>
+                        <ListItem>4xx: Client errors.</ListItem>
+                        <ListItem>5xx: Server errors.</ListItem>
+                    </List>
+                </Slide>
+
+                <Slide transition={["slide"]} bgColor="secondary">
+                    <Heading size={1} textColor="primary" fit>Make Your Own!</Heading>
+                    <CodePane
+                        lang="bash"
+                        source={require('raw-loader!../assets/close.repo')}
+                        margin="20px auto"
+                        overflow="overflow"
+                        height="80vh"
+                    />
+                    <Text textSize="0.8em" textColor="primary">
+                        Chose one of 4 branches with the basic structure setup
+                    </Text>
+                    <List textColor="primary">
+                        <ListItem>Python with Flask: <code>python_flask</code></ListItem>
+                        <ListItem>Java with Spring: <code>java_spring</code></ListItem>
+                        <ListItem>PHP with Slim: <code>php_slim</code></ListItem>
+                        <ListItem>Node with Express <code>node_express</code></ListItem>
+                    </List>
+                </Slide>
+
             </Deck>
         );
     }
