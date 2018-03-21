@@ -123,6 +123,38 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
 
+                <Slide transition={['slide']} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Parameters
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Parameters allow for passing of data along with a request over HTTP. You can pass as many
+                        parameters as you need and they can be read by the API like parameters in a function.
+                    </Text>
+                </Slide>
+
+                <Slide transition={['slide']} bgColor="primary">
+                    <Heading size={3} textColor="black">
+                        Parameters in GET
+                    </Heading>
+                    <Text textSize="0.8em">
+                        Parameters in get requests are the most commonly seen, as get requests require all data visible
+                        in the url. Everything following a <code>?</code> or a subsequent <code>&</code>.
+                    </Text>
+                    <Heading size={5} textColor="black">
+                        Example
+                    </Heading>
+                    <Text textSize="0.8em">
+                        <code>http://www.example.com?a=1&b=3&c=m2-m3-m4-m5</code>
+                    </Text>
+                    <List>
+                        <ListItem>a: <code>1</code></ListItem>
+                        <ListItem>b: <code>3</code></ListItem>
+                        <ListItem>c: <code>m2-m3-m4-m5</code></ListItem>
+                    </List>
+                </Slide>
+
+
                 <Slide transition={["slide"]} bgColor="secondary">
                     <Heading size={1} fit textColor="primary">
                         Status Codes
